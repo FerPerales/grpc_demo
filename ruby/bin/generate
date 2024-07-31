@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# For server
+grpc_tools_ruby_protoc -I ../protos --ruby_out=./client/lib --grpc_out=./client/lib ../protos/hello.proto
+
+# For client
+grpc_tools_ruby_protoc -I ../protos --ruby_out=./server/lib --grpc_out=./server/lib ../protos/hello.proto
